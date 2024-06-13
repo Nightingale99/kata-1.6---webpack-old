@@ -844,6 +844,10 @@ body {
   .swiper-price__card:last-child::after {
     display: none; } }
 
+@media (max-width: 768px) {
+  .swiper-price__uptitles {
+    display: none; } }
+
 .footer {
   position: relative;
   display: flex;
