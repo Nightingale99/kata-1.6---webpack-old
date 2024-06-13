@@ -1,0 +1,53 @@
+.call {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  max-width: 440px;
+  font-family: "TTLakesMedium";
+  font-size: 24px;
+  color: #1B1C21;
+  background-color: #FFFFFF;
+  box-shadow: 16px 0px 52px 0px #0E185033;
+  box-shadow: -2px 0px 4px 0px #454F7E05;
+  height: 100vh;
+  z-index: 10;
+  animation: slideFromRight 0.3s ease-in-out;
+}
+
+.call-closing {
+  animation: slideToRight 0.3s ease-in-out forwards;
+}
+.call--active {
+  display: flex;
+}
+
+#call-close {
+  margin-top: 24px;
+  margin-left: 5%;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+
+#call-close:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.call__title {
+  margin-left: 5%;
+}
+
+.call__title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: #41F6D7;
+  height: 40px;
+  width: 4px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

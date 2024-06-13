@@ -1,0 +1,153 @@
+.send {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  max-width: 440px;
+  font-family: "TTLakesMedium";
+  font-size: 24px;
+  color: #1B1C21;
+  background-color: #FFFFFF;
+  box-shadow: 16px 0px 52px 0px #0E185033;
+  box-shadow: -2px 0px 4px 0px #454F7E05;
+  height: 100vh;
+  z-index: 10;
+  animation: slideFromRight 0.3s ease-in-out;
+}
+
+.send--active {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.send__title {
+  margin-left: 5%;
+}
+
+.send__title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: #41F6D7;
+  height: 40px;
+  width: 4px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.form__description {
+  margin-left: 5%;
+  color: #7E7E82;
+  font-size: 14px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  display: inline-block;
+  padding-left: 16px;
+  height: 48px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 16px;
+  border: 1px solid #EAEAEA;
+  font-size: 16px;
+  font-family: "TTLakesRegular";
+  border-radius: 12px;
+}
+
+.form__link {
+  color: #FF3E79;
+  text-decoration: none;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}
+
+.form__textarea {
+  height: 118px;
+  padding-top: 12px;
+  margin-bottom: 19px;
+}
+
+#send-close {
+  margin-top: 24px;
+  margin-left: 5%;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+
+#send-close:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.form__submit::after {
+  content: '';
+  background-image: url('../img/goside.svg');
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 3px;
+}
+
+.form__submit {
+  box-sizing: border-box;
+  position: relative;
+  background-color: #FF3E79;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 32px;
+  width: 136px;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: 24px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: "TTLakesBold";
+  font-size: 12px;
+  text-align: left;
+}
+
+.send-closing {
+  animation: slideToRight 0.3s ease-in-out forwards;
+}
+@media (min-width: 1120px) {
+  .send {
+    margin-left: 320px;
+  }
+  #send-close {
+    position: absolute;
+    margin-left: 0;
+    left: -54px;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}

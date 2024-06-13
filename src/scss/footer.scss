@@ -25,16 +25,30 @@
   text-decoration: underline;
 }
 
-.footer__element:first-child {
-  margin-left: 5%;
-}
-
-.footer__element:last-child {
-  margin-right: 5%;
-}
-
 @media(min-width: 1120px){
   .footer {
     margin-left: 320px;
+  }
+}
+
+@media(max-width: 768px){
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__element {
+    margin: auto;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__element:first-child {
+    margin-left: 5%;
+  }
+  
+  .footer__element:last-child {
+    margin-right: 5%;
   }
 }

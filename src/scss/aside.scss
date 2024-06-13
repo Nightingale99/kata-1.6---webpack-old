@@ -14,7 +14,7 @@
 
 .service-aside{
   display: none;
-  min-width: 320px;
+  max-width: 320px;
   position: fixed;
   background-color: #FFFFFF;
   flex-direction: column;
@@ -162,7 +162,21 @@
   display: none;
 }
 
+.blur--active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:  #FFFFFF;
+  width: 100vw;
+  height: 1000vh;
+  opacity: 96.05%;
+  display: block;
+  z-index: 4;
+}
 
+.blur--dominate {
+  z-index: 9;
+}
 
 @media (min-width: 1120px) {
   #close {
@@ -181,20 +195,6 @@
   .container {
     display: flex;
     height: 100%;
-  }
-}
-
-@media (max-width: 1120px) {
-  .blur--active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color:  #FFFFFF;
-    width: 100vw;
-    height: 1000vh;
-    opacity: 96.05%;
-    display: block;
-    z-index: 4;
   }
 }
 

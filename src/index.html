@@ -32,8 +32,8 @@
         </nav>
       <footer class="service-aside__footer">
         <ul class="service-aside__contact-ways">
-          <li class="service-aside__button-catalogue"><button class="service-aside__button"><img src="./img/call.svg" alt="Call"></button></li>
-          <li class="service-aside__button-catalogue"><button class="service-aside__button"><img src="./img/chat.svg" alt="Chat"></button></li>
+          <li class="service-aside__button-catalogue"><button class="service-aside__button" id="aside-call"><img src="./img/call.svg" alt="Call"></button></li>
+          <li class="service-aside__button-catalogue"><button class="service-aside__button" id="aside-send"><img src="./img/chat.svg" alt="Chat"></button></li>
           <li class="service-aside__button-catalogue"><button class="service-aside__button"><img src="./img/profile.svg" alt="Profile"></button></li>
         </ul>
         <address>
@@ -53,8 +53,8 @@
         <img class="mobile-hidden service-header__divider" src="./img/divider.svg" alt="divider">
         <button class="service-header__button logo"><img src="./img/CPS.svg" alt="CPS"></button>
         <img class="tablet-hidden service-header__divider" src="./img/divider.svg" alt="divider">
-        <button class="service-header__button mobile-hidden"><img src="./img/call.svg" alt="call"></button>
-        <button class="service-header__button mobile-hidden"><img src="./img/chat.svg" alt="chat"></button>
+        <button class="service-header__button mobile-hidden" id="call"><img src="./img/call.svg" alt="call"></button>
+        <button class="service-header__button mobile-hidden" id="send"><img src="./img/chat.svg" alt="chat"></button>
         <button class="service-header__button mobile-hidden"><img src="./img/profile.svg" alt="profile"></button>
         <img class="mobile-hidden service-header__divider" src="./img/divider.svg" alt="divider">
         <button class="service-header__button service-header__button_desktop"><span class="mobile-hidden tablet-hidden service-header__button_label">Оставить заявку</span><img src="./img/repair.svg" alt="repair"></button>
@@ -201,7 +201,7 @@
               <button class="repair__card-button"><img src="./img/go.svg" alt=""></button>
             </div>
           </li>
-          <li class="swiper-slide repair-hidden">
+          <li class="swiper-slide">
             <div class="repair__card">
               <span class="repair__card-description">
                 Ремонт мониторов
@@ -304,17 +304,24 @@
         Информация, размещенная на данной странице, не является публичной офертой
       </p>
     </section>
-    <section class="call">
-      <button id="call-close"></button>
-      <h3 class="call__title">Обратная связь</h3>
+    <section class="send">
+      <button id="send-close"><img src="./img/cross.svg" alt="close" class="send-close__image"></button>
+      <h3 class="send__title">Обратная связь</h3>
       <form class="form">
         <input class="form__input" type="text" placeholder="Имя">
         <input class="form__input" type="text" placeholder="Телефон">
         <input class="form__input" type="text" placeholder="Электронная почта">
-        <textarea class="form__input" type="text" placeholder="Сообщение">
-        <p class="form__description">
-          Нажимая “отправить”, вы даете согласие на <a class="form__link" href="#">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="#">политикой конфиденциальности</a>
-        </p>
+        <textarea class="form__input form__textarea" type="text" placeholder="Сообщение"></textarea>
+        <p class="form__description">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="#">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="#">политикой конфиденциальности</a></p>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
+    </section>
+    <section class="call">
+      <button id="call-close"><img src="./img/cross.svg" alt="close"></button>
+      <h3 class="call__title">Заказать звонок</h3>
+      <form class="form">
+        <input class="form__input" type="text" placeholder="Телефон">
+        <p class="form__description">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="#">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="#">политикой конфиденциальности</a></p>
         <button type="submit" class="form__submit">Отправить</button>
       </form>
     </section>

@@ -7,6 +7,7 @@ import '../scss/repair.scss'
 import '../scss/price.scss'
 import '../scss/footer.scss'
 import '../scss/call.scss'
+import '../scss/send.scss'
 
 /*ASIDE MENU*/
 const menuButton = document.getElementById('menu');
@@ -14,8 +15,8 @@ const blur = document.querySelector('.blur');
 const closeButton = document.getElementById('close');
 const aside = document.querySelector('.service-aside');
 menuButton.addEventListener('click', () => {
-  aside.classList.toggle('service-aside--active');
-  blur.classList.toggle('blur--active');
+  aside.classList.add('service-aside--active');
+  blur.classList.add('blur--active');
 })
 
 closeButton.addEventListener('click', () => {
@@ -24,20 +25,9 @@ closeButton.addEventListener('click', () => {
     aside.classList.toggle('service-aside--active')
     aside.classList.remove('closing');
   }, 300);
-  blur.classList.toggle('blur--active');
+  blur.classList.remove('blur--active');
 })
 
-blur.addEventListener('click', () => {
-  console.log('жопа')
-  if(blur.classList.contains('blur--active') !== -1) {
-    aside.classList.add('closing');
-    setTimeout(() => {
-      aside.classList.toggle('service-aside--active')
-      aside.classList.remove('closing');
-    }, 300);
-    blur.classList.toggle('blur--active');
-  }
-})
 
 /*WORK WITH TEXT*/
 
@@ -187,7 +177,7 @@ showAll.addEventListener('click', () => {
       element.className += ' visible';
     });
     showAll.textContent = 'Скрыть';
-    showAll.className += ' brands__show-all--active'
+    showAll.className += ' brands__show-all--active';
   }
 })
 
@@ -206,6 +196,74 @@ showAllRepair.addEventListener('click', () => {
       element.className += ' visible';
     });
     showAllRepair.textContent = 'Скрыть';
-    showAllRepair.className += ' repair__show-all--active'
+    showAllRepair.className += ' repair__show-all--active';
+  }
+})
+
+/*SEND*/
+
+const sendButtons = document.querySelectorAll('#send, #aside-send');
+sendButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    document.querySelector('.send').classList.toggle('send--active');
+    blur.classList.add('blur--active');
+    blur.classList.add('blur--dominate')
+  });
+});
+
+const sendClose = document.querySelector('#send-close');
+const send = document.querySelector('.send');
+sendClose.addEventListener('click', () => {
+  send.classList.add('send-closing');
+  setTimeout(() => {
+   send.classList.remove('send--active')
+   send.classList.remove('send-closing');
+  }, 300);
+  blur.classList.remove('blur--active');
+  blur.classList.remove('blur--dominate')
+})
+
+/*CALL*/
+
+const callButtons = document.querySelectorAll('#call, #aside-call');
+callButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    document.querySelector('.call').classList.toggle('call--active');
+    blur.classList.add('blur--active');
+    blur.classList.add('blur--dominate');
+  });
+});
+
+const callClose = document.querySelector('#call-close');
+const call = document.querySelector('.call');
+callClose.addEventListener('click', () => {
+  call.classList.add('call-closing');
+  setTimeout(() => {
+   call.classList.remove('call--active');
+   call.classList.remove('call-closing');
+  }, 300);
+  blur.classList.remove('blur--active');
+  blur.classList.remove('blur--dominate');
+})
+
+/*BLUR*/
+
+blur.addEventListener('click', () => {
+  if(blur.classList.contains('blur--active')) {
+    if(aside.classList.contains('service-aside--active')) {
+      aside.classList.add('closing');
+    }
+    send.classList.add('send-closing');
+    call.classList.add('call-closing')
+    setTimeout(() => {
+      aside.classList.remove('service-aside--active');
+      aside.classList.remove('closing');
+      send.classList.remove('send--active');
+      send.classList.remove('send-closing');
+      call.classList.remove('call--active');
+      call.classList.remove('call-closing')
+    }, 300);
+    blur.classList.remove('blur--active');
+    blur.classList.remove('blur--dominate');
   }
 })
