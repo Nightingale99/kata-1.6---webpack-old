@@ -1,0 +1,125 @@
+.repair {
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #1B1C21;
+  font-family: "TTLakesMedium", sans-serif;
+  font-size: 16px;
+}
+
+.repair__header {
+  position: relative;
+  padding: 16px;
+  padding-left: 5%;
+  background: linear-gradient(#F8F8F8, #FFFFFF);
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.repair__header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #D9FFF5;
+}
+
+.repair__card{
+  display: flex;
+  width: 240px;
+  height: 160px;
+  border: 1px solid #EAEAEA;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  animation: fadeIn 1s alternate;
+}
+
+.repair__card-description {
+  margin-left: 16px;
+  margin-top: 16px;
+}
+
+.swiper-repair {
+  margin-left: 5%;
+  margin-top: 16px;
+}
+
+.repair__card-button {
+  margin-top: 104px;
+  margin-left: auto;
+  margin-right: 16px;
+  transition: 0.3s;
+}
+
+.repair__card-button:hover {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+
+.swiper-repair__swiper-pagination {
+  margin-left: 25%;
+}
+
+.repair__show-all{
+  margin-top: 20px;
+  color: #1B1C21;
+  border: none;
+  background-color: transparent;
+  font-family: "TTLakesMedium", sans-serif;
+  font-size: 16px;
+  margin-left: calc(5% + 33px);
+  transition: 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.repair__show-all:hover {
+  transform: scale(1.1);
+  color:#41F6D7; 
+  cursor: pointer;
+}
+
+.repair__show-all::before {
+  content: '';
+  transition: 1s;
+  background-image: url(../img/show-more.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: -33px;
+  top: 0;
+}
+
+
+.repair__show-all--active::before {
+  transform: rotate(180deg);
+  transition: 1s;
+}
+
+
+@media (min-width: 768px) {
+  .repair-hidden {
+    display: none;
+  }
+
+  .swiper-repair__swiper-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair {
+    margin-left: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .repair__show-all{
+    display: none;
+  }
+}

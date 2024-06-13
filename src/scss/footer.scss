@@ -1,0 +1,40 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #D9FFF5;
+  position: absolute
+}
+
+.footer__element {
+  margin-top: 32px;
+  max-width: 330px;
+  color: #7E7E82;
+  font-family: "TTLakesRegular";
+  text-decoration: none;
+}
+
+.footer__element[href]:hover {
+  text-decoration: underline;
+}
+
+.footer__element:first-child {
+  margin-left: 5%;
+}
+
+.footer__element:last-child {
+  margin-right: 5%;
+}
+
+@media(min-width: 1120px){
+  .footer {
+    margin-left: 320px;
+  }
+}

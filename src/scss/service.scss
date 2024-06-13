@@ -1,0 +1,259 @@
+button{
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.service-header__button, .service-main__button, .service-info__read-next{
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.service-header__button:hover, .service-main__button:hover, .service-info__read-next:hover{
+  transform: scale(1.1);
+  color:#41F6D7;
+  transition: 0.3s;
+}
+
+body{
+  margin: 0;
+  background-color: #F8F8F8;
+}
+
+.service-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  height: 88px;
+  border-bottom: 1px solid #D9FFF5;
+  background-color: #FFF;
+  padding: 0 5%;
+}
+
+.service-header__button, .service-header__divider{
+  max-height: 50px;
+  margin: auto 0;
+}
+
+.service-main {
+  padding-top: 24px;
+  width: 100%;
+}
+
+.service-main__title{
+  font-family: "TTLakesBold", sans-serif;
+  font-size: 28px;
+  height: 40px; 
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-left: 5%;
+}
+
+.service-main__flex-container{
+  margin-bottom: 24px;
+}
+
+.service-main__title::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  background-color: #41F6D7;
+  height: 40px;
+  width: 4px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.service-main__nav{
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  overflow-x: auto;
+  white-space:nowrap;
+}
+
+
+.service-main__button{
+  font-family: "TTLakesMedium", sans-serif;
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  color: #7E7E82;
+  padding: 0 16px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.service-main__button_active{
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.service-main__button_active:hover{
+  color: #7E7E82;
+  transform: scale(1);
+  cursor: default;
+}
+
+.service-info__text{
+  font-family: "TTLakesRegular", sans-serif;
+  color: #1B1C21;
+  font-size: 14px;
+  margin-left: 5%;
+  height: 100px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.service-info__text--active{
+  height: auto;
+}
+
+.service-info__read-next--active::before{
+  transform: rotate(180deg);
+}
+
+.service-info__read-next{
+  display: flex;
+  width: 200px;
+  align-items: center;
+  color: #1B1C21;
+  height: 24px;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  transition: 1s;
+}
+
+.service-info__read-next::before{
+  content: '';
+  margin-left: 5%;
+  margin-right: 8px;
+  display: inline-block;
+  background-image: url('../img/expand.svg');
+  height: 24px;
+  width: 24px;
+  transition: 1s;
+}
+
+.service-info__image{
+  width: 100%;
+  padding-bottom: 51px;
+}
+
+
+/*MOBILE Ver*/
+@media (max-width: 767px){
+  .mobile-hidden{
+    display: none;
+  }
+
+  .service-info__read-next{
+    margin-left: 5%;
+  }
+}
+
+/*TABLET Ver*/
+@media (min-width: 768px) and (max-width: 1120px){
+  .tablet-hidden{
+    display: none;
+  }
+}
+@media (min-width: 768px){
+  .service-header .logo {
+    margin-right: 32.55%;
+  }
+  .service-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 93.7%;
+  }
+
+  .service-info__image{
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    margin-left: 6.25%;
+  }
+  
+  .service-info__text {
+    margin: 0;
+  }
+
+  .service-info__read-next::before{
+    margin-left: 0;
+  }
+}
+
+/*DESKTOP Ver*/
+@media (min-width: 1120px) {
+  .service-header{
+    visibility: hidden;
+    position: relative;
+    height: 0;
+    transition: 0;
+  }
+
+  .service {
+    margin-left: 320px;
+  }
+
+  .service-header__button:not(.service-header__button_desktop) img {
+    visibility: hidden;
+  }
+
+  .service-header__button_desktop{
+    visibility:visible;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: #1B1C21;
+    font-family: "TTLakesMedium";
+    font-size: 16px;
+    right: 5%;
+    top: 42px;
+    transition: 0.3s;
+  }
+
+  .service-header__button_label{
+    margin-right: 8px;
+  }
+
+  .service-header__button_desktop:nth-child(9){
+    right: calc(5% + 200px);
+  }
+
+  .service-main__nav{
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+
+  .service-main{
+    padding-top: 42px;
+  }
+
+  .service-main__flex-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .service-info__image{
+    height: 307px;
+    width: 531px;
+  }
+
+  .service-main__title::before{
+    left: 320px;
+  }
+}

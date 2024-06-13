@@ -1,0 +1,212 @@
+.price{
+  overflow: hidden;
+}
+
+.price__header {
+  position: relative;
+  padding: 16px;
+  padding-left: 5%;
+  background: linear-gradient(#F8F8F8, #FFFFFF);
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.swiper-price {
+  margin-left: 5%;
+  font-family: 'TTLakesRegular';
+  font-size: 14px;
+}
+
+.swiper-price__button {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  transition: 0.3s;
+}
+
+.swiper-price__title {
+  margin: 0;
+  color: #7E7E82;
+  opacity: 72.18%;
+}
+
+.swiper-price__description {
+  display: block;
+  color: #1B1C21;
+  margin-bottom: 16px;
+}
+
+.swiper-price__card {
+  position: relative;
+  width: 260px;
+  height: 200px;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.price__header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #D9FFF5;
+}
+
+.swiper-price__swiper-pagination {
+  margin-left: 25%;
+}
+
+.swiper-price__button:hover {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.swiper-price__button-text {
+  display: none;
+}
+
+.price__subdescription {
+  max-width: 421px;
+  margin-left: 5%;
+  font-family: "TTLakesRegular";
+  color:#1B1C21;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.price__get-offer {
+  display: inline-block;
+  position: relative;
+  font-family: "TTLakesMedium";
+  font-size: 16px;
+  margin-left: 5%;
+  color: #1B1C21;
+  text-decoration: none;
+  padding-bottom: 47px;
+  transition: 0.3s;
+}
+
+.price__get-offer:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.price__get-offer::after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  display: block;
+  background-image: url('../img/more.svg');
+  position: absolute;
+  right: -24px;
+  top: 0;
+}
+
+.swiper-price__uptitles {
+  display: grid;
+  grid-template-columns: 46% auto auto;
+  color: #7E7E82;
+}
+
+@media (min-width: 1120px) {
+  .price{
+    margin-left: 320px;
+  }
+}
+
+@media (min-width: 768px){
+  .swiper-price__title {
+    display: none;
+  }
+
+  .swiper-price__swiper-pagination {
+    display: none;
+  }
+  .swiper-price__swiper-wrapper {
+    display: flex;
+    gap: 0 0;
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .swiper-price__button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .swiper-price__card {
+    display: grid;
+    font-family: "TTLakesRegular";
+    font-size: 14px;
+    grid-template-columns: 46% auto auto;
+    border-radius: 0;
+    column-gap: 0;
+    height: 64px;
+    width: 93.75%;
+    position: relative;
+  }
+
+  .swiper-price__button-text{
+    display: block;
+    position: relative;
+    color: #FFFFFF;
+    font-family: "TTLakesBold";
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .swiper-price__button-text::after {
+    content: '';
+    background-image: url('../img/goside.svg');
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -4px;
+  }
+
+  .swiper-price__card:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .swiper-price__card:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .swiper-price__button {
+    box-sizing: border-box;
+    background-color: #FF3E79;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 32px;
+    width: 119px;
+    border-radius: 25px;
+  }
+
+
+  .swiper-price__button-image {
+    display: none;
+  }
+
+  .swiper-price__card::after {
+    content: '';
+    background-color: #EAEAEA;
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 95%;
+    bottom: 0;
+    left: 16px;
+  }
+  .swiper-price__card:last-child::after {
+    display: none;
+  }
+}
