@@ -769,7 +769,8 @@ body {
 .swiper-price__uptitles {
   display: grid;
   grid-template-columns: 46% auto auto;
-  color: #7E7E82; }
+  color: #7E7E82;
+  width: 93.75%; }
 
 @media (min-width: 1120px) {
   .price {
@@ -938,6 +939,12 @@ body {
   width: 4px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px; }
+
+@media (min-width: 1120px) {
+  #call-close {
+    position: absolute;
+    margin-left: 0;
+    left: -54px; } }
 
 .send {
   display: none;
