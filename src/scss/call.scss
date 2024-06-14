@@ -51,3 +51,11 @@
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+
+@media (min-width: 1120px) {
+  #call-close {
+    position: absolute;
+    margin-left: 0;
+    left: -54px;
+  }
+}
